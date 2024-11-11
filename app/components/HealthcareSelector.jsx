@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const HealthcareSelector = () => {
+const HealthcareSelector = ({handleSelectQuestion}) => {
     const router = useRouter();
     const [selectedCard, setSelectedCard] = useState(null);
 
@@ -31,17 +31,18 @@ const HealthcareSelector = () => {
     ];
 
 
-    const handleCardClick = (id) => {
-        setSelectedCard(id === selectedCard ? null : id);
+    const handleCardClick = (e, prompt) => {
+        setSelectedCard(prompt?.id === selectedCard ? null : prompt?.id);
+        handleSelectQuestion(e, prompt);
     };
 
     return (
-        <div className="w-full p-4">
+        <div className="w-full my-5">
             <div className="grid grid-cols-2 gap-4">
                 {prompts.map((prompt) => (
                     <div
                         key={prompt.id}
-                        onClick={() => handleCardClick(prompt.id)}
+                        onClick={(e) => handleCardClick(e, prompt)}
                         className={`
             rounded-lg border p-6 
             cursor-pointer

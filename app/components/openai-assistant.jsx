@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw'
+import HealthcareSelector from './HealthcareSelector';
 
 
 
@@ -4693,10 +4694,10 @@ export default function OpenAIAssistant({
     console.log('not arrived');
   }
 
-  async function handleSubmitOpenAi(e) {
+  async function handleSubmitOpenAi(e, propmts) {
     e.preventDefault();
 
-    API.post('/api/chat', { inputText: userInput, lang: currentLanguage });
+    API.post('/api/chat', { inputText: userInput || propmts?.description, lang: currentLanguage });
     if (suggesstions?.length) return;
     // clear streaming message
     setStreamingMessage({
@@ -4716,7 +4717,7 @@ export default function OpenAIAssistant({
       {
         id: messageId.current.toString(),
         role: 'user',
-        content: userInput,
+        content: userInput || propmts?.description,
         createdAt: new Date(),
       },
     ]);
@@ -4728,7 +4729,7 @@ export default function OpenAIAssistant({
       body: JSON.stringify({
         assistantId: assistantId,
         threadId: threadId,
-        content: decodeURIComponent(userInput),
+        content: decodeURIComponent(userInput || propmts?.description),
       }),
     });
 
@@ -4777,6 +4778,12 @@ export default function OpenAIAssistant({
     });
   }
 
+  
+  const handleSelectQuestion = (e, prompt) => {
+    // setUserInput(prompt?.description);
+    handleSubmitOpenAi(e, prompt);
+  }
+
   // handles changes to the prompt input field
   function handlePromptChange(e) {
     hanleCloseClick();
@@ -4806,11 +4813,13 @@ export default function OpenAIAssistant({
     currentLanguage === 'ud' ||
     currentLanguage === 'fs';
 
-  return (
+    return (
+        <>
     <div
       className="flex flex-col items-center relative w-full"
       dir={isRtl ? 'rtl' : 'ltr'}
     >
+      <HealthcareSelector handleSelectQuestion={(e, prompt)=>handleSelectQuestion(e, prompt)} />
       {messages.map((m) => (
         <OpenAIAssistantMessage key={m.id} message={m} />
       ))}
@@ -4929,6 +4938,7 @@ export default function OpenAIAssistant({
         </div>
       </div>
     </div>
+    </>
   );
 }
 
