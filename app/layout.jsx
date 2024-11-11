@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
             <UserLocationContext.Provider
               value={{ userLocation, setUserLocation }}
             >
-              <div className="flex flex-col min-h-screen max-w-5xl mx-auto">
+              <div className="flex flex-col min-h-screen max-w-2xl mx-auto">
                 {pathName !== '/medical' && <Header />}
 
                 <Suspense

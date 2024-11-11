@@ -319,6 +319,10 @@ export default function HomePage() {
   const activeAnswerRef = useRef(null);
   const executeScroll = () => activeAnswerRef.current.scrollIntoView();
 
+  const handleSelectQuestion = (prompt) => {
+    console.log({prompt});
+  }
+
   return (
     <div className=" flex flex-col w-full h-auto items-center mt-2 overflow-hidden ">
       {/* <div className="navigate flex items-center flex-wrap justify-center gap-4 my-10  w-full sm:text-sm  ">
@@ -356,7 +360,7 @@ export default function HomePage() {
           </button>
         </Link>
       </div> */}
-      <HealthcareSelector />
+      {/* <HealthcareSelector handleSelectQuestion={handleSelectQuestion} /> */}
         <div className="w-[97%] flex items-center justify-center rounded-lg">
           <OpenAIAssistant
             // assistantId="asst_t7GuIOqWsYXxVBlIpXH5D29e"

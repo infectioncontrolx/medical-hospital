@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Modals from './Modals';
 import FeedBackModal from './FeedBackModal';
+
 export default function Header() {
     const [lang, setLang] = useState('English');
     const [modelOpened, setModelOpened] = useState(false);
@@ -80,10 +81,20 @@ export default function Header() {
                         className=" mt-4 mb-2 w-36"
                         priority
                     />
-                    <h1 className=" leading-7 my-1 text-[#00b0e0] px-2 font-bold text-lg text-center">
+                    <h1 className=" leading-7 my-1 text-red-500 px-2 font-bold text-lg text-center">
                         {/* {appTitle[currentLanguage]} */}
                         WAAW 2024 Special Edition
                     </h1>
+                    <div className='cursor-pointer ' onClick={() => setModelOpened(true)}>
+                        <Image
+                            src={feedbackImg}
+                            height={35}
+                            width={35}
+                            alt="logo"
+                            // className=" mt-4 mb-2 "
+                            priority
+                        />
+                    </div>
                 </div>
             </div>
 
