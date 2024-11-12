@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux';
 import { ReactTyped } from 'react-typed';
 import remarkGfm from 'remark-gfm';
 import FeedBackModal from './FeedBackModal';
-import HealthcareSelector from './HealthcareSelector';
 const OpenAIAssistant = dynamic(() => import('./openai-assistant'), {
   ssr: false, // This ensures the component is only rendered on the client side
 });
@@ -320,8 +319,8 @@ export default function HomePage() {
   const executeScroll = () => activeAnswerRef.current.scrollIntoView();
 
   const handleSelectQuestion = (prompt) => {
-    console.log({prompt});
-  }
+    console.log({ prompt });
+  };
 
   return (
     <div className=" flex flex-col w-full h-auto items-center mt-2 overflow-hidden ">
@@ -361,14 +360,13 @@ export default function HomePage() {
         </Link>
       </div> */}
       {/* <HealthcareSelector handleSelectQuestion={handleSelectQuestion} /> */}
-        <div className="w-[97%] flex items-center justify-center rounded-lg">
-          <OpenAIAssistant
-            // assistantId="asst_t7GuIOqWsYXxVBlIpXH5D29e"
-            assistantId="asst_rp7mKcsIJsmKzQETXUIaO3yU"
-            userInput={userInput}
-            setUserInput={setUserInput}
-          />
-        </div>
+      <div className="w-[97%] flex items-center justify-center rounded-lg">
+        <OpenAIAssistant
+          assistantId="asst_lN3WJdIcU0N7s3tq27Gouykr"
+          userInput={userInput}
+          setUserInput={setUserInput}
+        />
+      </div>
       <div
         ref={activeAnswerRef}
         className="w-4/5 px-4 mt-3 bg-[#F0F4F9] rounded-lg"
