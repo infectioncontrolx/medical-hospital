@@ -35,16 +35,16 @@ export default function HomePage() {
 
   const [activeAnswer, setActiveAnswer] = useState({});
 
-  useEffect(() => {
-    // setLoading(false)
-    const hasRendered = localStorage.getItem('feedBackForInit');
-    if (!hasRendered) {
-      setTimeout(() => {
-        setModelOpened(true);
-        localStorage.setItem('feedBackForInit', true); //Set flag
-      }, 50000);
-    }
-  }, []);
+//   useEffect(() => {
+//     // setLoading(false)
+//     const hasRendered = localStorage.getItem('feedBackForInit');
+//     if (!hasRendered) {
+//       setTimeout(() => {
+//         setModelOpened(true);
+//         localStorage.setItem('feedBackForInit', true); //Set flag
+//       }, 50000);
+//     }
+//   }, []);
 
   useEffect(() => {
     const type = searchParams.get('type');

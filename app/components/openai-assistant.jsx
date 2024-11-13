@@ -4967,8 +4967,8 @@ export function OpenAIAssistantMessage({ message }) {
       <div
         className={`mx-4 ${
           message.role == 'user'
-            ? ' bg-[#1d3b70] text-white w-fit px-2 py-2 rounded-md'
-            : ' text-[#00b0e0] leading-7'
+            ? ' bg-[#00b0e0] text-white w-fit px-2 py-2 rounded-md'
+            : ' text-black leading-7'
         } ${
           isRtl ? 'text-right' : 'text-left'
         } overflow-auto openai-text relative`}
