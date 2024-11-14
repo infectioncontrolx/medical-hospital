@@ -1,3 +1,4 @@
+'use client';
 // /* eslint-disable react-hooks/exhaustive-deps */
 // 'use client';
 // import Loader from '@/components/Shared/Loader';
@@ -124,9 +125,9 @@
 // export default Chats;
 
 /* eslint-disable react-hooks/exhaustive-deps */
-'use client';
 import Loader from '@/components/Shared/Loader';
-import { Parser } from 'json2csv';
+import {Parser} from '@json2csv/plainjs';
+
 
 import moment from 'moment';
 import { useEffect, useState } from 'react';

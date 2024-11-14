@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
-import { Parser } from 'json2csv';
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Loader } from 'lucide-react';
 import moment from 'moment';
 import { useEffect, useState } from 'react';
@@ -8,8 +7,9 @@ import { useSelector } from 'react-redux';
 import Paginate from '../../../components/Paginate/Paginate';
 import { isValidArray } from '../../../lib/func';
 import API from '../../../lib/instance/instance';
+import {Parser} from '@json2csv/plainjs';
 
-const feedBack = () => {
+const FeedBack = () => {
 
   const [isReq,setIsReq]= useState(false)
   const [feedBacks, setFeedBacks] = useState({});
@@ -128,4 +128,4 @@ const feedBack = () => {
   );
 };
 
-export default feedBack;
+export default FeedBack;
