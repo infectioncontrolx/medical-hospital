@@ -4,7 +4,7 @@
       "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
     }
   },
-  "funcions": {
+  "functions": {
     "app/api/**/*.js": {
       "maxDuration": 60
     }
