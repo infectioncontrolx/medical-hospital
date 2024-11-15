@@ -321,7 +321,7 @@ export default function HomePage() {
   const handleSelectQuestion = (prompt) => {
     console.log({ prompt });
   };
-
+  {console.log("i am from 🤦‍♂️ => ", activeAnswer?.answer)}
   return (
     <div className=" flex flex-col w-full h-auto items-center mt-2 overflow-hidden ">
       {/* <div className="navigate flex items-center flex-wrap justify-center gap-4 my-10  w-full sm:text-sm  ">
@@ -398,8 +398,6 @@ export default function HomePage() {
                 currentLanguage === 'ar' ? 'text-right' : 'text-left'
               }   overflow-auto openai-text relative`}
             >
-              {/* {console.log( decodeURIComponent(activeAnswer?.answer[currentLanguage]))} */}
-
               <Markdown remarkPlugins={[remarkGfm]}>
                 <ReactTyped
                   strings={[activeAnswer?.answer[currentLanguage]]}

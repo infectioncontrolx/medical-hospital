@@ -4930,6 +4930,7 @@ export default function OpenAIAssistant({
                 ? decodeURIComponent(answer?.question[currentLanguage])
                 : decodeURIComponent(userInput)}
             </p>
+            
             <div className="bg-white rounded-lg sm:text-sm p-4 flex items-center gap-6">
               {answer?.answer && (
                 <ReactTyped
@@ -5039,7 +5040,8 @@ export function OpenAIAssistantMessage({ message }) {
 //           )
 //         }}
         >{message?.content}</ReactMarkdown>
-        {/* <MarkdownRenderer markdown={message?.content} /> */}
+        {/* {console.log('I am from answer', )} */}
+        {/* <MarkdownRenderer markdown={message?message?.content.content} /> */}
         {/* <Markdown remarkPlugins={[remarkGfm]}>
 
           {message?.content}
