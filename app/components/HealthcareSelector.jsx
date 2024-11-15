@@ -10,23 +10,23 @@ const HealthcareSelector = ({handleSelectQuestion}) => {
     const prompts = [
         {
             id: 1,
-            title: "Symptoms Guide",
-            description: "What are common symptoms of flu vs cold?",
+            title: "WAAW ARM",
+            description: "What are antimicrobial agents and antibiotics?",
         },
         {
             id: 2,
-            title: "Medications",
-            description: "How do antibiotics work in the body?",
+            title: "WAAW ARM",
+            description: "What are antimicrobial resistance bacteria?",
         },
         {
             id: 3,
-            title: "Heart Health",
-            description: "What are ways to maintain heart health?",
+            title: "WAAW ARM",
+            description: "What causes antimicrobial resistance?",
         },
         {
             id: 4,
-            title: "Mental Health",
-            description: "How to manage stress and anxiety?",
+            title: "WAAW ARM",
+            description: "What are the consequences of AMR?",
         }
     ];
 
@@ -55,10 +55,10 @@ const HealthcareSelector = ({handleSelectQuestion}) => {
           `}
                     >
                         <div className="space-y-2">
-                            <h3 className="text-lg font-semibold text-gray-900">
+                            <h3 className="text-lg font-semibold text-gray-900 cursor-pointer">
                                 {prompt.title}
                             </h3>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 cursor-pointer">
                                 {prompt.description}
                             </p>
                         </div>

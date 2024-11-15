@@ -4697,7 +4697,9 @@ export default function OpenAIAssistant({
   async function handleSubmitOpenAi(e, propmts) {
     e.preventDefault();
 
-    API.post('/api/chat', { inputText: userInput || propmts?.description, lang: currentLanguage });
+    console.log("prompts", propmts);
+
+    // API.post('/api/chat', { inputText: userInput || propmts?.description, lang: currentLanguage });
     if (suggesstions?.length) return;
     // clear streaming message
     setStreamingMessage({
@@ -4751,12 +4753,12 @@ export default function OpenAIAssistant({
     });
 
     runner.on('messageDone', (message) => {
-      console.log(message, 'messagemessagemessage');
-      // get final message content
-      const finalContent =
-        message.content[0].type == 'text' ? message.content[0].text.value : '';
-
-      // add assistant message to list of messages
+    //   console.log(message, 'messagemessagemessage');
+    // get final message content
+    const finalContent =
+    message.content[0].type == 'text' ? message.content[0].text.value : '';
+    
+    // add assistant message to list of messages
       messageId.current++;
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -4767,7 +4769,11 @@ export default function OpenAIAssistant({
           content: finalContent,
           createdAt: new Date(),
         },
-      ]);
+    ]);
+    if(finalContent){
+        API.post('/api/chat', {responseText: finalContent, inputText: userInput || propmts?.description, lang: currentLanguage });
+    }
+      console.log('messagemessagemessage', finalContent);
 
       // remove busy indicator
       setIsLoading(false);
@@ -4973,7 +4979,7 @@ export function OpenAIAssistantMessage({ message }) {
           isRtl ? 'text-right' : 'text-left'
         } overflow-auto openai-text relative`}
       >
-        {console.log(message?.content)}
+        {/* {console.log(message?.content)} */}
         <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}

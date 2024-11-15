@@ -44,7 +44,8 @@ const FeedBack = () => {
 
   const downloadCSV = () => {
     if (isValidArray(feedBacks?.data)) {
-      const fields = ['gender', 'age', 'nationality','lang', 'rating', 'message', 'createdAt'];
+    //   const fields = ['gender', 'age', 'nationality','lang', 'rating', 'message', 'createdAt'];
+      const fields = ['rating', 'message', 'createdAt'];
       const json2csvParser = new Parser({ fields });
       const csv = json2csvParser.parse(feedBacks.data.map(feedback => ({
         ...feedback,
@@ -78,7 +79,7 @@ const FeedBack = () => {
         {!isReq&&isValidArray(feedBacks?.data) &&
           feedBacks.data.map((feedback, index) => (
             <li key={index} className="border p-4 mt-3 rounded-md">
-              <div>
+              {/* <div>
                 <p>
                   <span className="font-bold">Gender:</span> {feedback.gender}{' '}
                 </p>
@@ -92,12 +93,12 @@ const FeedBack = () => {
                 <p>
                   <span className="font-bold">Nationality:</span> {feedback?.nationality}{' '}
                 </p>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <p>
                   <span className="font-bold">Lang:</span> {feedback?.lang}{' '}
                 </p>
-              </div>
+              </div> */}
               <div>
                 <p>
                   <span className="font-bold">Rating:</span> {feedback.rating}{' '}

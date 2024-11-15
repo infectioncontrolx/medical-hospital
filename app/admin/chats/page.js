@@ -175,6 +175,7 @@ const Chats = () => {
       const json2csvParser = new Parser({ fields });
       const csv = json2csvParser.parse(
         chats.data.map((chat) => ({
+          InputText: chat.responseText,
           InputText: chat.inputText,
           Lang: chat.lang,
           CreatedAt: moment(chat.createdAt).format('MMMM Do YYYY, h:mm:ss a'),
