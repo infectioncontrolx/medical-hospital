@@ -10,22 +10,22 @@ const HealthcareSelector = ({handleSelectQuestion}) => {
     const prompts = [
         {
             id: 1,
-            title: "WAAW ARM",
+            title: "WAAW AMR",
             description: "What are antimicrobial agents and antibiotics?",
         },
         {
             id: 2,
-            title: "WAAW ARM",
+            title: "WAAW AMR",
             description: "What are antimicrobial resistance bacteria?",
         },
         {
             id: 3,
-            title: "WAAW ARM",
+            title: "WAAW AMR",
             description: "What causes antimicrobial resistance?",
         },
         {
             id: 4,
-            title: "WAAW ARM",
+            title: "WAAW AMR",
             description: "What are the consequences of AMR?",
         }
     ];
