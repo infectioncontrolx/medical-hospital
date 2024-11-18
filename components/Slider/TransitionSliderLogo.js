@@ -41,6 +41,7 @@
 const TransitionSliderLogo = () => {
   const partners = [
     { name: 'Makkan Guests', logo: '/s-logo9.jpg' },
+    { name: 'SSIPC', logo: '/s-logo-34.png' },
     { name: 'SSIPC', logo: '/s-logo1.webp' },
   ];
 
@@ -49,11 +50,11 @@ const TransitionSliderLogo = () => {
       <div className="max-w-4xl mx-auto px-0">
         <div className="flex justify-center items-center space-x-8 md:space-x-16">
           {partners.map((partner, index) => (
-            <div key={index} className="flex flex-col items-center w-1/2">
+            <div key={index} className="flex flex-col items-center ">
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="w-full max-w-[200px] object-contain"
+                className="w-full object-contain"
               />
             </div>
           ))}
