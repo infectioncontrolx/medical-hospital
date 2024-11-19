@@ -4697,7 +4697,9 @@ export default function OpenAIAssistant({
   async function handleSubmitOpenAi(e, propmts) {
     e.preventDefault();
 
-    API.post('/api/chat', { inputText: userInput || propmts?.description, lang: currentLanguage });
+    console.log("prompts", propmts);
+
+    // API.post('/api/chat', { inputText: userInput || propmts?.description, lang: currentLanguage });
     if (suggesstions?.length) return;
     // clear streaming message
     setStreamingMessage({
@@ -4751,12 +4753,12 @@ export default function OpenAIAssistant({
     });
 
     runner.on('messageDone', (message) => {
-      console.log(message, 'messagemessagemessage');
-      // get final message content
-      const finalContent =
-        message.content[0].type == 'text' ? message.content[0].text.value : '';
-
-      // add assistant message to list of messages
+    //   console.log(message, 'messagemessagemessage');
+    // get final message content
+    const finalContent =
+    message.content[0].type == 'text' ? message.content[0].text.value : '';
+    
+    // add assistant message to list of messages
       messageId.current++;
       setMessages((prevMessages) => [
         ...prevMessages,
@@ -4767,7 +4769,11 @@ export default function OpenAIAssistant({
           content: finalContent,
           createdAt: new Date(),
         },
-      ]);
+    ]);
+    if(finalContent){
+        API.post('/api/chat', {responseText: finalContent, inputText: userInput || propmts?.description, lang: currentLanguage });
+    }
+      console.log('messagemessagemessage', finalContent);
 
       // remove busy indicator
       setIsLoading(false);
@@ -4924,6 +4930,7 @@ export default function OpenAIAssistant({
                 ? decodeURIComponent(answer?.question[currentLanguage])
                 : decodeURIComponent(userInput)}
             </p>
+            
             <div className="bg-white rounded-lg sm:text-sm p-4 flex items-center gap-6">
               {answer?.answer && (
                 <ReactTyped
@@ -4967,13 +4974,13 @@ export function OpenAIAssistantMessage({ message }) {
       <div
         className={`mx-4 ${
           message.role == 'user'
-            ? ' bg-[#1d3b70] text-white w-fit px-2 py-2 rounded-md'
-            : ' text-[#00b0e0] leading-7'
+            ? ' bg-[#00b0e0] text-white w-fit px-2 py-2 rounded-md'
+            : ' text-black leading-7'
         } ${
           isRtl ? 'text-right' : 'text-left'
         } overflow-auto openai-text relative`}
       >
-        {console.log(message?.content)}
+        {/* {console.log(message?.content)} */}
         <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
@@ -5033,7 +5040,8 @@ export function OpenAIAssistantMessage({ message }) {
 //           )
 //         }}
         >{message?.content}</ReactMarkdown>
-        {/* <MarkdownRenderer markdown={message?.content} /> */}
+        {/* {console.log('I am from answer', )} */}
+        {/* <MarkdownRenderer markdown={message?message?.content.content} /> */}
         {/* <Markdown remarkPlugins={[remarkGfm]}>
 
           {message?.content}

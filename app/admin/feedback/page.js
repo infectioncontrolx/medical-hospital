@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
-import { Parser } from 'json2csv';
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Loader } from 'lucide-react';
 import moment from 'moment';
 import { useEffect, useState } from 'react';
@@ -8,8 +7,9 @@ import { useSelector } from 'react-redux';
 import Paginate from '../../../components/Paginate/Paginate';
 import { isValidArray } from '../../../lib/func';
 import API from '../../../lib/instance/instance';
+import {Parser} from '@json2csv/plainjs';
 
-const feedBack = () => {
+const FeedBack = () => {
 
   const [isReq,setIsReq]= useState(false)
   const [feedBacks, setFeedBacks] = useState({});
@@ -44,7 +44,8 @@ const feedBack = () => {
 
   const downloadCSV = () => {
     if (isValidArray(feedBacks?.data)) {
-      const fields = ['gender', 'age', 'nationality','lang', 'rating', 'message', 'createdAt'];
+    //   const fields = ['gender', 'age', 'nationality','lang', 'rating', 'message', 'createdAt'];
+      const fields = ['rating', 'message', 'createdAt'];
       const json2csvParser = new Parser({ fields });
       const csv = json2csvParser.parse(feedBacks.data.map(feedback => ({
         ...feedback,
@@ -78,7 +79,7 @@ const feedBack = () => {
         {!isReq&&isValidArray(feedBacks?.data) &&
           feedBacks.data.map((feedback, index) => (
             <li key={index} className="border p-4 mt-3 rounded-md">
-              <div>
+              {/* <div>
                 <p>
                   <span className="font-bold">Gender:</span> {feedback.gender}{' '}
                 </p>
@@ -92,12 +93,12 @@ const feedBack = () => {
                 <p>
                   <span className="font-bold">Nationality:</span> {feedback?.nationality}{' '}
                 </p>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <p>
                   <span className="font-bold">Lang:</span> {feedback?.lang}{' '}
                 </p>
-              </div>
+              </div> */}
               <div>
                 <p>
                   <span className="font-bold">Rating:</span> {feedback.rating}{' '}
@@ -128,4 +129,4 @@ const feedBack = () => {
   );
 };
 
-export default feedBack;
+export default FeedBack;

@@ -6,11 +6,14 @@ connectTODB();
 
 const ChatListSchema = new Schema(
   {
+    responseText:{
+      type:String,
+      trim:true,
+    },
     inputText:{
       type:String,
       trim:true,
-    }
-    ,
+    },
     lang: {
       type: String,
       default: null

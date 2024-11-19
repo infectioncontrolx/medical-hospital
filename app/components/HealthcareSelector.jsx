@@ -3,31 +3,31 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const HealthcareSelector = ({handleSelectQuestion}) => {
+const HealthcareSelector = ({ handleSelectQuestion }) => {
     const router = useRouter();
     const [selectedCard, setSelectedCard] = useState(null);
 
     const prompts = [
         {
             id: 1,
-            title: "Symptoms Guide",
-            description: "What are common symptoms of flu vs cold?",
+            title: "WAAW AMR",
+            description: "What is Antimicrobial Resistance (AMR)?",
         },
         {
             id: 2,
-            title: "Medications",
-            description: "How do antibiotics work in the body?",
+            title: "WAAW AMR",
+            description: "What is the role of Infection Prevention in combating AMR?",
         },
-        {
-            id: 3,
-            title: "Heart Health",
-            description: "What are ways to maintain heart health?",
-        },
-        {
-            id: 4,
-            title: "Mental Health",
-            description: "How to manage stress and anxiety?",
-        }
+        // {
+        //     id: 3,
+        //     title: "WAAW AMR",
+        //     description: "What are AMR Awareness & Guidance Resources?",
+        // },
+        // {
+        //     id: 4,
+        //     title: "WAAW AMR",
+        //     description: "What are the standard Infection Prevention and Control (IPC) precautions?",
+        // }
     ];
 
 
@@ -55,15 +55,52 @@ const HealthcareSelector = ({handleSelectQuestion}) => {
           `}
                     >
                         <div className="space-y-2">
-                            <h3 className="text-lg font-semibold text-gray-900">
+                            <h3 className="text-lg font-semibold text-gray-900 cursor-pointer">
                                 {prompt.title}
                             </h3>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 cursor-pointer">
                                 {prompt.description}
                             </p>
                         </div>
                     </div>
                 ))}
+                {/* extra should be edit again */}
+                <div
+                    key={prompt.id}
+                    onClick={(e) => handleCardClick(e, prompt)}
+                    className={`
+            rounded-lg border p-6 
+            cursor-pointer
+            transition-all duration-200 
+            hover:shadow-lg border-[#00b0e0]
+            flex
+            items-center
+          `}
+                >
+                    <div className="space-y-2">
+                        <p className="text-md text-[#1d3b70] cursor-pointer font-bold text-center">
+                            What are AMR Awareness & Guidance Resources?
+                        </p>
+                    </div>
+                </div>
+                <div
+                    key={prompt.id}
+                    onClick={(e) => handleCardClick(e, prompt)}
+                    className={`
+            rounded-lg border p-6 
+            cursor-pointer
+            transition-all duration-200 
+            hover:shadow-lg border-[#00b0e0]
+            flex
+            items-center
+          `}
+                >
+                    <div className="space-y-2">
+                        <p className="text-md text-[#1d3b70] cursor-pointer font-bold text-center">
+                        What are the standard Infection Prevention and Control (IPC) precautions?
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

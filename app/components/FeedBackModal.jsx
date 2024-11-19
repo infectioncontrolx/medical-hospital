@@ -81,7 +81,7 @@ export default function FeedBackModal({ setIsOpen, isOpen }) {
       setIsCreateReq(true);
       const res = await API.post('/api/feedback', {
         ...feedBackData,
-        lang: currentLanguage,
+        // lang: currentLanguage,
       });
       setIsCreateReq(false);
       if (res?.data?.success) {
