@@ -29,24 +29,36 @@ const data1 = [
 
 const data2 = [
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'Proper Hand Hygiene video',
+    link: 'https://youtu.be/cLZi4SkTKZ4?si=NBsmJT_Af4FtA_xx',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: "Personal Protective Equipment's Video",
+    link: 'https://youtu.be/D5i8ZeBVAzM?si=t1H7J31e_gbSMzh0',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'Put on N95 Respirator ',
+    link: 'https://youtu.be/zNV6dK6Y-Ek?si=1uTr58UpXCQkNjBp',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'Remove the N95 Respirator',
+    link: 'https://youtu.be/Z9Pk-YqUqjc?si=mXvd2D9mj4DMhJu7',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'How To Use PAPR Machine? Donning, Doffing',
+    link: 'https://youtu.be/fCYXqLy_kZA?si=jGepORtREmhaqH2x',
+  },
+  {
+    title: 'Surgical Scrubbing Instructions for Clinical Staff',
+    link: 'https://youtu.be/sC9vpZLLLLI?si=b-QjnwXahAvDP3aX',
+  },
+  {
+    title: 'Biohazard Spill Kits for Infection Control - Procedure Training',
+    link: 'https://youtu.be/_wq1QfL4sb0?si=0ZPExy3HRgDOnGQZ',
+  },
+  {
+    title: 'Candida Auris Screening Procedure',
+    link: 'https://youtu.be/JbD2LxMWo1c?si=yhd-Qq6_12Z96M51',
   },
 ];
 

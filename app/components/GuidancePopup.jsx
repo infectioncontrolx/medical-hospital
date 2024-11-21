@@ -178,13 +178,13 @@ export default function GuidancePopup({ setIsOpen, isOpen, data }) {
                                             items-left
                                         `}
                         >
-                          <div className="space-y-2">
+                          <div className="space-y-1">
                             <p className="text-md text-[#1d3b70] cursor-pointer font-bold">
                               {item?.title}
                             </p>
 
                             <button
-                              className="bg-[#02B1BF] text-white py-1 pt-2 px-4 rounded-lg flex items-center gap-1 justify-between"
+                              className="bg-[#02B1BF] text-white py-1 pt-2 px-3 rounded-lg flex items-center gap-1 justify-between"
                               onClick={() => handleRedirect(item?.link)}
                             >
                               Link <LuArrowUpRight className="-mt-1" />
