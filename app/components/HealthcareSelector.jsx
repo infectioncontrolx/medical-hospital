@@ -55,7 +55,7 @@ const data2 = [
 const HealthcareSelector = ({ handleSelectQuestion }) => {
     const router = useRouter();
     const [selectedCard, setSelectedCard] = useState(null);
-    const [modelOpened, setModelOpened] = useState(true);
+    const [modelOpened, setModelOpened] = useState(false);
     const [selectedGuidance, setSelectedGuidance] = useState([]);
 
     const prompts = [
