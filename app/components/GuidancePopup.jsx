@@ -165,7 +165,7 @@ export default function GuidancePopup({ setIsOpen, isOpen, data }) {
                     <IoIosCloseCircleOutline size={25} />
                   </button>
                 </DialogTitle>
-                <div className="max-h-[400px] overflow-hidden overflow-y-auto flex flex-col gap-4">
+                <div className="max-h-[400px] overflow-hidden overflow-y-auto flex pr-4 flex-col gap-4">
                   {data?.length > 0
                     ? data?.map((item, i) => (
                         <div
