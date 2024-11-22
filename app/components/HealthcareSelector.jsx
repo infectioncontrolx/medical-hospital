@@ -6,24 +6,93 @@ import GuidancePopup from './GuidancePopup';
 
 const data1 = [
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'AMR Awareness week 2024 logo',
+    link: 'https://drive.google.com/file/d/1mR_0jeu1UerzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'MOH Logo',
+    link: 'https://drive.google.com/file/d/1tyNqJgIF3FfKx6jhyM_1CYr_kJjNG0y_/view?usp=drive_link',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'WAAW Document',
+    link: 'https://docs.google.com/document/d/1wBMZVcAhNAy5XHclIRErJEZnbw22xALM/edit?usp=drive_link&ouid=108223022301349105528&rtpof=true&sd=true',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'WAAW Presentation',
+    link: 'https://docs.google.com/presentation/d/1HucOy3RYzwFVxf_IcUONbUsriTSgjnIl/edit?usp=drive_link&ouid=108223022301349105528&rtpof=true&sd=true',
   },
   {
-    title: 'AMR Awareness Week Logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1U-erzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
+    title: 'WAAW Campaign guide',
+    link: 'https://drive.google.com/file/d/1aSS0V9Gs-SqCHu9oZV_CYHmnPoO_Hdup/view?usp=drive_link',
+  },
+  {
+    title: 'المحتوى التوعوي بمكافحة مقاومة مضادات الميكروبات 2024',
+    link: 'https://docs.google.com/document/d/1-a2AQgz17sOpelh7-BGC37Ap0RENYNM7/edit?usp=drive_link&ouid=108223022301349105528&rtpof=true&sd=true',
+  },
+  {
+    title: 'تفعيل حملة الأسبوع العالمي لمقاومة مضادات الميكروبات',
+    link: 'https://drive.google.com/file/d/1ReE2KU8tNsOQah0UcLkEhCN13CYrIV2p/view?usp=drive_link',
+  },
+  {
+    title: 'Antibiotic Infographic ',
+    link: 'https://drive.google.com/file/d/1Tq6QxgMovjK4zPUBKLBlLz-2eYV3cUO1/view?usp=drive_link',
+  },
+  {
+    title: 'CDC',
+    link: 'https://drive.google.com/file/d/1OmEPgw0t2v0FSGLMq9d9ZK3FDNi2n6yR/view?usp=drive_link',
+  },
+  {
+    title: 'Dentists',
+    link: 'https://drive.google.com/file/d/1uFXS6wm9wEzXEP_sv4w3Gwv0JMhkSXAA/view?usp=drive_link',
+  },
+  {
+    title: 'Doctors',
+    link: 'https://drive.google.com/file/d/1-e-RCyBLbdh60f4IpU_Sn4nSPERRsl7_/view?usp=drive_link',
+  },
+  {
+    title: 'Health workers',
+    link: 'https://drive.google.com/file/d/1LsiRB3Tjj2ibumZlGelZVFPfa75IT28m/view?usp=drive_link',
+  },
+  {
+    title: 'Managers',
+    link: 'https://drive.google.com/file/d/11c8w6y-wn9d4vyg72eJuAkESln-KBFd7/view?usp=drive_link',
+  },
+  {
+    title: 'Midwives',
+    link: 'https://drive.google.com/file/d/1OlgxMAVPIFutTAXWwTF91bzy7kB2W05T/view?usp=drive_link',
+  },
+  {
+    title: 'Misuse of antibiotics',
+    link: 'https://drive.google.com/file/d/1hpPocUMF7Bj945Zmgsh7WPpckk6mskRO/view?usp=drive_link',
+  },
+
+  {
+    title: 'Pharmacists ',
+    link: 'https://drive.google.com/file/d/1G7jG1hCJveOi-2anLfYIvywA_nL5PUTk/view?usp=drive_link',
+  },
+  {
+    title: 'Time running out',
+    link: 'https://drive.google.com/file/d/1vD85gKp7A3ILpwNCWg1BcLO6znH7wNJN/view?usp=drive_link',
+  },
+  {
+    title: '2024 رابط محتوى علمي وتوعوي داعم للحملة من منظمة الصحة العالمية',
+    link: 'https://docs.google.com/document/d/1DAx72LVASCJBWOcQ8nm2r7s3OwPSh8XH/edit?usp=drive_link&ouid=108223022301349105528&rtpof=true&sd=true',
+  },
+  {
+    title: 'سمعتوا وش يقولون عن المضادات الحيوية ',
+    link: 'https://drive.google.com/file/d/1fl9C7pMXp7CMful91OlVyCW7tSHbxUiX/view?usp=drive_link',
+  },
+  {
+    title: 'كتيب تلوين للأطفال',
+    link: 'https://drive.google.com/file/d/1mBmvRHsRsVe7WoQJ2jXC5XcWNDIZq8yZ/view?usp=drive_link',
+  },
+  {
+    title: '',
+    link: '',
+  },
+  {
+    title: '',
+    link: '',
   },
 ];
 
