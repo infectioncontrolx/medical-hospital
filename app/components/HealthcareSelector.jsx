@@ -138,14 +138,15 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
             rounded-lg border p-6
             cursor-pointer
             transition-all duration-200
-            hover:shadow-lg border-[#00b0e0]
+            hover:shadow-lg bg-[#1d3b70]
             flex
             items-center
           `}
           >
             <div className="space-y-2">
-              <p className="text-md text-[#1d3b70] cursor-pointer font-bold text-center">
-                What are AMR Awareness & Guidance Resources?
+              <p className="text-md text-white bg-[#1d3b70] cursor-pointer font-bold text-center">
+                Ministry of Health’s Awareness and Guidance Resources on
+                Antimicrobial Resistance (AMR)
               </p>
             </div>
           </div>
@@ -153,14 +154,14 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
             className={`
             rounded-lg border p-6
             transition-all duration-200
-            hover:shadow-lg border-[#00b0e0]
+            hover:shadow-lg bg-[#1d3b70]
             flex
             items-center
           `}
             onClick={(e) => handleModalOpened(data2)}
           >
             <div className="space-y-2">
-              <p className="text-md text-[#1d3b70] cursor-pointer font-bold text-center">
+              <p className="text-md text-white bg-[#1d3b70] cursor-pointer font-bold text-center">
                 What are the standard Infection Prevention and Control (IPC)
                 precautions?
               </p>
