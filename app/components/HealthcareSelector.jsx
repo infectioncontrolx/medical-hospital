@@ -213,7 +213,7 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
           `}
           >
             <div className="space-y-2">
-              <p className="text-md text-white cursor-pointer font-bold text-center">
+              <p className="text-md text-white cursor-pointer font-semibold text-center">
                 Ministry of Health’s Awareness and Guidance Resources on
                 Antimicrobial Resistance (AMR)
               </p>
@@ -230,7 +230,7 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
             onClick={(e) => handleModalOpened(data2)}
           >
             <div className="space-y-2">
-              <p className="text-md text-white cursor-pointer font-bold text-center">
+              <p className="text-md text-white cursor-pointer font-semibold text-center">
                 What are the standard Infection Prevention and Control (IPC)
                 precautions?
               </p>
