@@ -6,10 +6,6 @@ import GuidancePopup from './GuidancePopup';
 
 const data1 = [
   {
-    title: 'AMR Awareness week 2024 logo',
-    link: 'https://drive.google.com/file/d/1mR_0jeu1UerzvI7XlPfskC_N_2ObOOU/view?usp=drive_link',
-  },
-  {
     title: 'MOH Logo',
     link: 'https://drive.google.com/file/d/1tyNqJgIF3FfKx6jhyM_1CYr_kJjNG0y_/view?usp=drive_link',
   },
