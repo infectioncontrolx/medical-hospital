@@ -34,16 +34,16 @@ export default function HomePage() {
 
   const [activeAnswer, setActiveAnswer] = useState({});
 
-//   useEffect(() => {
-//     // setLoading(false)
-//     const hasRendered = localStorage.getItem('feedBackForInit');
-//     if (!hasRendered) {
-//       setTimeout(() => {
-//         setModelOpened(true);
-//         localStorage.setItem('feedBackForInit', true); //Set flag
-//       }, 50000);
-//     }
-//   }, []);
+  //   useEffect(() => {
+  //     // setLoading(false)
+  //     const hasRendered = localStorage.getItem('feedBackForInit');
+  //     if (!hasRendered) {
+  //       setTimeout(() => {
+  //         setModelOpened(true);
+  //         localStorage.setItem('feedBackForInit', true); //Set flag
+  //       }, 50000);
+  //     }
+  //   }, []);
 
   useEffect(() => {
     const type = searchParams.get('type');
@@ -321,7 +321,9 @@ export default function HomePage() {
   const handleSelectQuestion = (prompt) => {
     console.log({ prompt });
   };
-  {console.log("i am from 🤦‍♂️ => ", activeAnswer?.answer)}
+  {
+    console.log('i am from 🤦‍♂️ => ', activeAnswer?.answer);
+  }
   return (
     <div className=" flex flex-col w-full h-auto items-center mt-2 overflow-hidden ">
       {/* <div className="navigate flex items-center flex-wrap justify-center gap-4 my-10  w-full sm:text-sm  ">
@@ -434,7 +436,7 @@ export default function HomePage() {
       </div> */}
       <div className="w-[96%] lg:w-[97%] relative border-2 border-[#1d3b70] rounded-lg px-6 mx-4 text-center shadow my-4">
         <div className="absolute -top-4 inset-x-0 flex justify-center">
-          <span className="bg-white text-[#00b0e0] px-4 text-2xl font-bold">
+          <span className="bg-white text-red-500 px-4 text-2xl font-bold">
             {sponsorText[currentLanguage]}
           </span>
         </div>
