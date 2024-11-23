@@ -159,7 +159,7 @@ export default function GuidancePopup({ setIsOpen, isOpen, data }) {
               >
                 <DialogTitle className="flex gap-4 justify-between items-center">
                   <h2 className="text-xl text-[#4a4a4a] font-inter font-bold text-center md:text-left">
-                    Guidance
+                    Resources
                   </h2>
                   <button onClick={() => setIsOpen(false)}>
                     <IoIosCloseCircleOutline size={25} />
@@ -173,13 +173,13 @@ export default function GuidancePopup({ setIsOpen, isOpen, data }) {
                           className={`
                                             rounded-lg border p-6
                                             transition-all duration-200
-                                            hover:shadow-lg border-[#00b0e0]
+                                            hover:shadow-lg border-[#02B1BF]
                                             flex
                                             items-left
                                         `}
                         >
                           <div className="space-y-1">
-                            <p className="text-md text-[#1d3b70] cursor-pointer font-bold">
+                            <p className="text-md text-[#221E1F] cursor-pointer font-bold">
                               {item?.title}
                             </p>
 

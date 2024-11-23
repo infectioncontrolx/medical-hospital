@@ -60,7 +60,7 @@ export default function Header() {
           />
         </Link>
       </div>
-      <h1 className=" leading-7 my-1 text-red-500 px-2 font-bold text-lg text-center">
+      <h1 className=" leading-7 my-1 text-[#0CAFB8] px-2 font-bold text-lg text-center">
         {/* {appTitle[currentLanguage]} */}
         IPC AI Assistant for Healthcare Professionals
       </h1>

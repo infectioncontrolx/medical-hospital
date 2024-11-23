@@ -188,13 +188,13 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
             hover:shadow-lg
             ${
               selectedCard === prompt.id
-                ? 'bg-blue-50 border-[#1d3b70]'
+                ? 'bg-blue-50 border-[#0CAFB8]'
                 : 'bg-white hover:bg-gray-50 border-gray-200'
             }
           `}
             >
               <div className="">
-                <p className="text-md font-semibold text-center text-gray-600 cursor-pointer">
+                <p className="text-md font-semibold text-center text-[#0CAFB8] cursor-pointer">
                   {prompt.description}
                 </p>
               </div>
@@ -207,7 +207,7 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
             rounded-lg border p-6
             cursor-pointer
             transition-all duration-200
-            hover:shadow-lg bg-red-500
+            hover:shadow-lg bg-[#0CAFB8]
             flex
             items-center
           `}
@@ -223,7 +223,7 @@ const HealthcareSelector = ({ handleSelectQuestion }) => {
             className={`
             rounded-lg border p-6
             transition-all duration-200
-            hover:shadow-lg bg-red-500
+            hover:shadow-lg bg-[#0CAFB8]
             flex
             items-center
           `}
