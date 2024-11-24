@@ -6,11 +6,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { useParams, usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import FeedBackModal from './FeedBackModal';
 
 export default function Header() {
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    // Stop animation after 5 seconds
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const [lang, setLang] = useState('English');
   const [modelOpened, setModelOpened] = useState(false);
   const path = usePathname();
@@ -89,7 +99,8 @@ export default function Header() {
               height={35}
               width={35}
               alt="logo"
-              // className=" mt-4 mb-2 "
+              className={`min-w-[40px] w-[45px] sm:w-[60px]  hover:scale-110 transition-transform
+            ${isAnimating ? 'animate-[bounce_1s_ease-in-out_5]' : ''}`}
               priority
             />
           </div>
