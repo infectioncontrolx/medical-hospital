@@ -60,13 +60,11 @@ export default function Header() {
           />
         </Link>
       </div>
-      <h1 className=" leading-7 my-1 text-[#0CAFB8] px-2 font-bold text-lg text-center">
+      <h1 className=" leading-7 sm:leading-8 my-1 text-[#0CAFB8] px-2 font-bold break-words text-lg text-center max-w-[99%] mx-auto">
         {/* {appTitle[currentLanguage]} */}
-        IPC AI Assistant for Healthcare Professionals
+        AI Assistant for Infection Prevention & Control for Healthcare
+        Professionals
       </h1>
-      {/* <h1 className=" leading-7 my-1 text-[#00b0e0] px-2 font-bold text-lg text-center">
-                WAAW 2024 Special Edition
-            </h1> */}
 
       <div className="px-4 w-full">
         <div className="p-3 w-full flex justify-evenly flex-row items-center">
