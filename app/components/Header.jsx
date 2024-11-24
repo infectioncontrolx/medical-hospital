@@ -19,7 +19,7 @@ export default function Header() {
     // Stop animation after 5 seconds
     const timer = setTimeout(() => {
       setIsAnimating(false);
-    }, 3000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -102,7 +102,7 @@ export default function Header() {
               width={35}
               alt="logo"
               className={`min-w-[40px] w-[45px] sm:w-[60px]  hover:scale-110 transition-transform
-            ${isAnimating ? 'animate-[bounce_1s_ease-in-out_5]' : ''}`}
+            ${isAnimating ? 'animate-[bounce_1s_ease-in-out_15]' : ''}`}
               priority
             />
           </div>
