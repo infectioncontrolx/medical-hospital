@@ -1,6 +1,8 @@
 'use client';
 
-import feedbackImg from '@/public/OIP.jpeg';
+// import feedbackImg from '@/public/OIP.jpeg';
+import feedbackImg from '@/public/oip-green.png';
+
 import logoImg from '@/public/waaw2021.png';
 import Image from 'next/image';
 import Link from 'next/link';
