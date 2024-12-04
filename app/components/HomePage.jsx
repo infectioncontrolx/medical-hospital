@@ -218,7 +218,7 @@ export default function HomePage() {
       plceholder: 'Andika swali lako',
       FAQ: 'Mifano Michache ya Kuuliza',
       less: 'Chache',
-      more: 'Zaidi',
+      more: 'Zaidii',
       examples: 'Mifano',
       about: 'Kuhusu',
       privacy: 'Sera ya Faragha',
